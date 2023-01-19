@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ui.change_pwd.ChangePwdActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_36"
+        android:layout_marginTop="@dimen/margin_44"
+        android:fontFamily="@font/inter_semi_bold"
+        android:includeFontPadding="false"
+        android:text="@string/change_pwd"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_36"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:fontFamily="@font/inter_regular"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/_4sdp"
+        android:text="@string/change_pwd_desc"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/text_size_14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_pwd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_current_pwd"
+        style="@style/tvChangePwdStyle"
+        android:layout_marginTop="@dimen/margin_40"
+        android:text="@string/current_pwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_current_pwd"
+        style="@style/edtChangePwdStyle"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_pwd" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_new_pwd"
+        style="@style/tvChangePwdStyle"
+        android:text="@string/new_pwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_current_pwd" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_new_pwd"
+        style="@style/edtChangePwdStyle"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_pwd" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_confirm_pwd"
+        style="@style/tvChangePwdStyle"
+        android:text="@string/confirm_new_pwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_new_pwd" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_confirm_new_pwd"
+        style="@style/edtChangePwdStyle"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirm_pwd" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        style="@style/btnChangePwdStyle"
+        android:text="@string/submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_confirm_new_pwd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

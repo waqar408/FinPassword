@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ui.forgot_pwd.ForgotPwdActivity">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30"
+        android:src="@drawable/ic_back"
+        android:tint="@color/title_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_pwd"
+        android:layout_width="@dimen/margin_144"
+        android:layout_height="@dimen/margin_144"
+        android:layout_marginTop="@dimen/margin_36"
+        android:background="@drawable/forgot_pwd_bg"
+        android:padding="@dimen/_24sdp"
+        android:src="@drawable/pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_47"
+        android:fontFamily="@font/inter_semi_bold"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:text="@string/forgot_password1"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintTop_toBottomOf="@id/img_pwd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_36"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_36"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="@dimen/_4sdp"
+        android:text="@string/forgot_pwd_desc"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/text_size_14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_email"
+        style="@style/tvLoginStyle"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_user_name"
+        style="@style/edtLoginStyle"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionDone"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+
+        style="@style/btnForgotPwdStyle"
+        android:text="@string/send"
+        app:layout_constraintTop_toBottomOf="@id/edt_user_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

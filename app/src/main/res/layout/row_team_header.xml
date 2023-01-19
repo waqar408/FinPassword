@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mainHeaderLL"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/title_color">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_team"
+            style="@style/tvListingStyle"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            tools:text="Gmail"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_add_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:src="@drawable/ic_plus"
+
+                android:textSize="@dimen/text_size_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:listitem="@layout/row_listing" />
+
+    <!--    <com.tsuryo.swipeablerv.SwipeableRecyclerView-->
+    <!--        android:id="@+id/rv_team"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:rightBgColor="@color/title_color"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/toolbar"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        tools:listitem="@layout/row_listing"-->
+    <!--        app:rightImage="@drawable/ic_delete_white_24dp"-->
+    <!--        app:rightText="Delete"-->
+    <!--        app:textColor="@android:color/white"-->
+    <!--        app:textSize="20sp" />-->
+    <View
+        style="@style/viewStyle"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_type" />
+
+</LinearLayout>

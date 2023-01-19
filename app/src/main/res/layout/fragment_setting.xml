@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.setting.SettingFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        style="@style/scrollViewStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout style="@style/csStyle">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_name"
+                style="@style/tvSettingStyle"
+                android:layout_marginTop="@dimen/margin_26"
+                android:text="@string/user_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_name_setting"
+                style="@style/tvSubSettingStyle"
+                android:text="Emily Watson"
+                android:textColor="@color/setting_text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+            <View
+                android:id="@+id/view_user_name"
+                style="@style/viewStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name_setting" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email"
+                style="@style/tvSettingStyle"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_user_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_email_setting"
+                style="@style/tvSubSettingStyle"
+                android:text="Emilywatson01@gmail.com"
+                android:textColor="@color/setting_text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email" />
+
+            <View
+                android:id="@+id/view_email"
+                android:visibility="gone"
+                style="@style/viewStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_setting" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_company"
+                style="@style/tvSettingStyle"
+                android:visibility="gone"
+                android:text="@string/name_company"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name_company"
+                style="@style/tvSubSettingStyle"
+                android:text="Demo"
+                android:visibility="gone"
+                android:textColor="@color/setting_text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+            <View
+                android:id="@+id/view_company"
+                style="@style/viewStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_company" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_change_pwd"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/margin_60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_company">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_change_pwd"
+                    style="@style/tvSettingStyle"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/change_pwd" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_pwd"
+                android:visibility="gone"
+                style="@style/viewStyle"
+                android:layout_marginTop="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_change_pwd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_logout"
+                style="@style/tvSettingStyle"
+                android:text="@string/log_out"
+                android:layout_width="match_parent"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/margin_60"
+                android:textColor="@color/text_color_red"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pwd" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

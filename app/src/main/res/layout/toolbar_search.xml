@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_136"
+    android:background="@drawable/sign_up_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_logo"
+        android:layout_marginTop="@dimen/_14sdp"
+android:padding="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/margin_18"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_65"
+        android:layout_marginStart="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_18"
+        android:fontFamily="@font/inter_regular"
+        android:paddingEnd="@dimen/margin_20"
+        android:textColor="@color/black"
+        android:textColorHint="#59000000"
+        android:hint="@string/search_here"
+        android:paddingStart="@dimen/margin_25"
+        android:drawableEnd="@drawable/ic_search"
+        android:background="@drawable/search_bg"
+        android:textSize="@dimen/text_size_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
